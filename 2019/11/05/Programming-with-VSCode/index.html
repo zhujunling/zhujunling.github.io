@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="zhujunling&#39;s blog">
 <meta property="og:description" content="1. C&#x2F;C++——微软C&#x2F;C++ for Visual Studio Code Mingw-w64——http:&#x2F;&#x2F;mingw-w64.org&#x2F;doku.php&#x2F;download&#x2F;mingw-builds （MinGW只能编译生成32位，已停止更新）  环境变量path——C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-05T15:54:55.881Z">
+<meta property="og:updated_time" content="2019-11-06T13:59:11.659Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2019/11/05/Programming-with-VSCode/">
@@ -211,10 +211,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-05 23:34:19 / 修改时间：23:54:55" itemprop="dateCreated datePublished" datetime="2019-11-05T23:34:19+08:00">2019-11-05</time>
+              <time title="创建时间：2019-11-05 23:34:19" itemprop="dateCreated datePublished" datetime="2019-11-05T23:34:19+08:00">2019-11-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-06 21:59:11" itemprop="dateModified" datetime="2019-11-06T21:59:11+08:00">2019-11-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -247,17 +253,27 @@
 </li>
 <li><p>vscode中View &gt; Command Palette（Ctrl+Shift+P）：<br>输入C/C++，在列表中选择编辑配置Edit Configurations，将会打开c_cpp_properties.json文件。</p>
 </li>
-<li><p>输入task，在列表中选择 Tasks: Configure Default Build Task，将会打开tasks.json文件。</p>
-<pre><code>${file}      ${fileDirname}/${fileBasenameNoExtension}    
-&quot;isDefault&quot;: true 表示可以通过Ctrl+Shift+B运行这个任务，否则要通过Command Palette运行 &quot;Tasks: Run Build Task&quot;。</code></pre></li>
+<li><p>输入task，在列表中选择 Tasks: Configure Default Build Task，将会打开tasks.json文件。<br>${file}      ${fileDirname}/${fileBasenameNoExtension}<br>“isDefault”: true 表示可以通过Ctrl+Shift+B运行这个任务，否则要通过Command Palette运行 “Tasks: Run Build Task”。</p>
+</li>
 <li><p>vscode中左侧调试按钮（Ctrl+Shift+D）：设置——选择C++（GDB/LLDB），将会打开launch.json文件。<br>program：${workspaceFolder}/${fileBasenameNoExtension}<br>stopAtEntry：调试时默认在第一行设置断点，默认为true。<br>miDebuggerPath：设置为C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\gdb.exe<br>按Ctrl+Shift+B进行编译，调试菜单——启动调试（快捷键F5），先点左侧调试按钮然后点击小绿色三角。<br>调试程序system(“pause”); 或者可在return 0前面加断点。</p>
 </li>
 <li><p>.vscode隐藏文件夹通常包含了各种配置文件，settings.json，选择vscode资源管理器打开对应文件夹即可应用此文件夹配置。</p>
 </li>
 </ul>
 <hr>
-<h3 id="2-Python"><a href="#2-Python" class="headerlink" title="2. Python"></a>2. Python</h3><hr>
-<h3 id="3-Latex"><a href="#3-Latex" class="headerlink" title="3. Latex"></a>3. Latex</h3>
+<h3 id="2-Python——微软Python-extension-for-Visual-Studio-Code"><a href="#2-Python——微软Python-extension-for-Visual-Studio-Code" class="headerlink" title="2. Python——微软Python extension for Visual Studio Code"></a>2. Python——微软Python extension for Visual Studio Code</h3><ul>
+<li>Command Palette (Ctrl+Shift+P)使用命令Python： Select Interpreter选择使用的python版本 , 或者通过状态栏选择（如可用）。手动设置： File &gt; Preferences &gt; Settings command (Ctrl+，) 。</li>
+<li>建立并进入Workspace文件夹，通过cmd命令code .  （# open code with current directory），新建一个py文件写简单代码并保存。</li>
+<li>使用vscode的终端输入命令：View | Terminal   （Ctrl+`）</li>
+<li>调试：设置断点，点击调试图标，可点击debug的设置图标configure launch.json进行调试器的配置。<br>点击绿色箭头即可开始调试，如果程序代码有输入，则可在下拉列表中选择外部终端进行输入。</li>
+</ul>
+<hr>
+<h3 id="3-Latex"><a href="#3-Latex" class="headerlink" title="3. Latex"></a>3. Latex</h3><ul>
+<li>TeX Live环境变量：&lt;目录&gt;texlive\2019\bin\win32，命令行输入 tex -v 验证安装。</li>
+<li>建立工作目录，通过cmd命令code .，新建一个tex文件并保存。</li>
+<li>配置VSCode的LaTeX Workshop插件，编辑 .vscode 目录中的settings.json。</li>
+</ul>
+
     </div>
 
     
@@ -273,14 +289,17 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/05/MarkDown-Guide/" rel="next" title="MarkDown Guide">
-                  <i class="fa fa-chevron-left"></i> MarkDown Guide
+                <a href="/2019/11/05/ARM-Linux/" rel="next" title="ARM_Linux">
+                  <i class="fa fa-chevron-left"></i> ARM_Linux
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+                <a href="/2019/11/06/Git-Guide/" rel="prev" title="Git-Guide">
+                  Git-Guide <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -319,7 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-C-C-——微软C-C-for-Visual-Studio-Code"><span class="nav-number">1.</span> <span class="nav-text">1. C/C++——微软C/C++ for Visual Studio Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Python"><span class="nav-number">2.</span> <span class="nav-text">2. Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Latex"><span class="nav-number">3.</span> <span class="nav-text">3. Latex</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-C-C-——微软C-C-for-Visual-Studio-Code"><span class="nav-number">1.</span> <span class="nav-text">1. C/C++——微软C/C++ for Visual Studio Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Python——微软Python-extension-for-Visual-Studio-Code"><span class="nav-number">2.</span> <span class="nav-text">2. Python——微软Python extension for Visual Studio Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Latex"><span class="nav-number">3.</span> <span class="nav-text">3. Latex</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -335,7 +354,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
