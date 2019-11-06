@@ -26,7 +26,15 @@ miDebuggerPath：设置为C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-posix-d
 调试程序system("pause"); 或者可在return 0前面加断点。
 + .vscode隐藏文件夹通常包含了各种配置文件，settings.json，选择vscode资源管理器打开对应文件夹即可应用此文件夹配置。
 ---
-### 2. Python
+### 2. Python——微软Python extension for Visual Studio Code
++ Command Palette (Ctrl+Shift+P)使用命令Python： Select Interpreter选择使用的python版本 , 或者通过状态栏选择（如可用）。手动设置： File > Preferences > Settings command (Ctrl+，) 。
++ 建立并进入Workspace文件夹，通过cmd命令code .  （# open code with current directory），新建一个py文件写简单代码并保存。
++ 使用vscode的终端输入命令：View | Terminal   （Ctrl+`）
++ 调试：设置断点，点击调试图标，可点击debug的设置图标configure launch.json进行调试器的配置。
+点击绿色箭头即可开始调试，如果程序代码有输入，则可在下拉列表中选择外部终端进行输入。
 ---
 
 ### 3. Latex
++ TeX Live环境变量：<目录>texlive\2019\bin\win32，命令行输入 tex -v 验证安装。
++ 建立工作目录，通过cmd命令code .，新建一个tex文件并保存。
++ 配置VSCode的LaTeX Workshop插件，编辑 .vscode 目录中的settings.json。
